@@ -18,7 +18,6 @@ import (
 	"golang.org/x/tools/go/analysis/passes/bools"
 	"golang.org/x/tools/go/analysis/passes/buildtag"
 	"golang.org/x/tools/go/analysis/passes/cgocall"
-	"golang.org/x/tools/go/analysis/passes/composite"
 	"golang.org/x/tools/go/analysis/passes/copylock"
 	"golang.org/x/tools/go/analysis/passes/httpresponse"
 	"golang.org/x/tools/go/analysis/passes/loopclosure"
@@ -244,7 +243,7 @@ func runAnalyses(ctx context.Context, v View, pkg Package, report func(a *analys
 		bools.Analyzer,
 		buildtag.Analyzer,
 		cgocall.Analyzer,
-		composite.Analyzer,
+		// composite.Analyzer,
 		copylock.Analyzer,
 		httpresponse.Analyzer,
 		loopclosure.Analyzer,
